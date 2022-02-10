@@ -13,6 +13,7 @@ CREATE TABLE ORDERS(
     customerID int,
     PRIMARY KEY (orderID),
     FOREIGN KEY (customerID) REFERENCES CUSTOMERS(customerID)
+    ON DELETE CASCADE
 );
 
 CREATE TABLE FOOD(
@@ -23,4 +24,5 @@ CREATE TABLE FOOD(
     orderID int,
     PRIMARY KEY (foodID),
     FOREIGN KEY (orderID) REFERENCES ORDERS(orderID)
+    ON DELETE CASCADE
 );
